@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100d12">
+<title>Para ti ♡</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ min-height:100vh;
+ background:#100d12;
+ color:#f5e7ed;
+ font-family:Georgia,serif;
+ display:grid;
+ place-items:center;
+ padding:22px;
+}
+main{
+ width:100%;
+ max-width:390px;
+ text-align:center;
+}
+.heart{color:#e99abb;font-size:27px}
+h1{color:#efb1cc;font-weight:normal}
+p{line-height:1.8;color:#dfd1d9}
+.small{font-size:13px;color:#a997a2}
+button{
+ background:#d783a8;
+ color:#21121b;
+ border:0;
+ border-radius:30px;
+ padding:13px 25px;
+ font-size:15px;
+ margin-top:18px;
+}
+#letter,#ending{display:none}
+#letter{
+ text-align:left;
+ border-top:1px solid #49303e;
+ margin-top:30px;
+ padding-top:15px;
+}
+#letter h2{text-align:center;color:#efb1cc;font-weight:normal}
+#ending{text-align:center;margin-top:25px}
+button:focus-visible{outline:2px solid white}
+</style>
+</head>
+
+<body>
+<main>
+
+<section id="intro">
+ <div class="heart">♡</div>
+ <h1>Para ti, mi niña</h1>
+ <p>Hay algo que llevo en mi corazón<br>
+ y me gustaría que leyeras.</p>
+ <p class="small">Una carta hecha especialmente para ti.</p>
+ <button id="open">Abrir mi carta ♡</button>
+</section>
+
+<article id="letter">
+ <h2>Mi amor...</h2>
+
+ <p>
+ Quiero pedirte perdón por todo el daño que
+ pude haberte causado. Sé que cometí errores
+ y no quiero esconderme detrás de excusas.
+ </p>
+
+ <p>
+ Sé que me equivoqué con lo de tu amigo.
+ No debí decirte que no fueras a su funeral.
+ Aunque en ese momento pensaba de otra manera,
+ entiendo que era tu decisión y que necesitabas
+ tener la oportunidad de despedirte de él.
+ </p>
+
+ <p>
+ Me duele saber que te hice sentir mal y que
+ pude haberte quitado un momento importante.
+ Ahora entiendo que debí escucharte y acompañarte,
+ no decidir por ti.
+ </p>
+
+ <p>
+ No quiero justificar lo que hice. Quiero
+ reconocerlo de verdad y aprender de ello.
+ No quiero volver a hacerte sentir que tus
+ decisiones no te pertenecen.
+ </p>
+
+ <p>
+ Fuiste mi primera novia y una persona
+ increíblemente importante en mi vida.
+ No sabes cuánto valoro todo lo que vivimos,
+ cada conversación, cada risa y cada momento.
+ </p>
+
+ <p>
+ No te escribo para presionarte ni para que
+ cambies de opinión por estas palabras.
+ Sé que estás pensando las cosas y quiero
+ respetar tu tiempo.
+ </p>
+
+ <p>
+ Si algún día decidimos intentarlo nuevamente,
+ quiero que sea diferente. Quiero demostrarte
+ con hechos que puedo mejorar, que puedo
+ escucharte y que también puedo respetarte.
+ </p>
+
+ <p>
+ Gracias por haberme dado tantos momentos
+ bonitos. Independientemente de lo que decidas,
+ siempre voy a valorar lo que compartimos.
+ </p>
+
+ <div style="text-align:center">
+  <button id="last">Hay algo más... ♡</button>
+ </div>
+
+ <section id="ending">
+  <div class="heart">♡</div>
+  <h2>Te amo.</h2>
+  <p>
+   No tienes que responder ahora.
+   Tómate tu tiempo, mi niña.
+   Quiero que estés bien.
+  </p>
+  <p class="small">Con cariño, de alguien que te quiere mucho.</p>
+ </section>
+</article>
+
+</main>
+
+<script>
+const intro = document.getElementById("intro");
+const letter = document.getElementById("letter");
+const ending = document.getElementById("ending");
+
+document.getElementById("open").onclick = () => {
+ intro.style.display = "none";
+ letter.style.display = "block";
+};
+
+document.getElementById("last").onclick = () => {
+ ending.style.display = "block";
+ document.getElementById("last").style.display = "none";
+ ending.scrollIntoView({behavior:"smooth"});
+};
+</script>
+
+</body>
+</html>
+
